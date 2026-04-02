@@ -3,39 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parinaam</title>
+  <title>Parinaam | Student Result Portal</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Top branding area -->
-  <header class="top-bar">
-    <p class="brand-name">Parinaam</p>
-    <p class="brand-dot"></p>
-  </header>
+  <div class="bg-decoration">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
 
-  <!-- Main wrapper keeps the layout centered -->
-  <main class="page-wrapper">
-    <!-- Search card -->
-    <section class="search-card">
-      <p class="eyebrow">Parinaam</p>
-      <h1>Parinaam</h1>
-      <p class="intro-text">Enter a roll number to access academic records.</p>
+  <main class="container">
+    <header class="header animate-fade-in">
+      <h1 class="brand">PARINAAM</h1>
+      <p class="tagline">The Standard of Academic Excellence</p>
+    </header>
 
-      <div class="input-group">
-        <label for="rollNumber">Enter Roll Number</label>
-        <input
-          type="text"
-          id="rollNumber"
-          placeholder="e.g. 101"
-          autocomplete="off"
-        >
+    <section class="login-section animate-slide-up">
+      <div class="glass-card login-card">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <h2>Student Portal</h2>
+          <p>Access your academic records with precision.</p>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <div class="input-group">
+            <label for="rollNumber">Roll Number</label>
+            <div class="input-wrapper">
+              <input type="text" id="rollNumber" placeholder="2024001" autocomplete="off" required>
+              <div class="input-focus-bg"></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Security Key</label>
+            <div class="input-wrapper">
+              <input type="password" id="password" placeholder="••••••••" autocomplete="off" required>
+              <div class="input-focus-bg"></div>
+            </div>
+            <span class="helper-text">Default key is <strong>1212</strong></span>
+          </div>
+
+          <button type="button" id="checkResultBtn" class="btn-primary">
+            <span>Check Result</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
       </div>
-
-      <button id="checkResultBtn">Check Result</button>
     </section>
+
+    <footer class="footer animate-fade-in">
+      <p>&copy; 2026 Parinaam Education Board. All rights reserved.</p>
+    </footer>
   </main>
 
   <script src="script.js"></script>
